@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Loading from '../shared/Loading';
-import Swal from 'sweetalert2'
 import Modal from '../shared/Modal';
 import { getEvent } from './calendar.api';
 // import { getEvent } from './calendar.api';
 import { handleModalEvent } from './calendar.reducer';
 import ModalEvent from './components/ModalEvent';
-import { X } from 'react-feather';
 
 
 
@@ -92,7 +90,7 @@ function Calendar(props) {
                     <div 
                         key={i} 
                         className={name !== 'disabled' ? 'box border' : 'box border bg-secondary'}
-                        style={ dateOrigin == new Date().toDateString() ? {backgroundColor : 'gold'}: null}
+                        style={ dateOrigin === new Date().toDateString() ? {backgroundColor : 'gold'}: null}
                         onClick={name !== 'disabled' ?()=>handleEvent(res) : ()=>{}}
                         >
                             <b>{date} </b>

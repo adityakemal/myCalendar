@@ -4,7 +4,7 @@ import Calendar from './features/caldendar/Calendar';
 
 
 function App() {
-  localStorage.setItem('eventList', JSON.stringify([]))
+  console.log = ()=>{}
   return (
     <div className="App">
       <Calendar />

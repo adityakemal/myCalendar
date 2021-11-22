@@ -27,7 +27,6 @@ function ModalEvent(props) {
             date : detailEvent.dateOrigin
         })
         setDetailArr(detailEvent.dataEvent)
-        console.log(detailEvent, 'time in modal')
     }, [modal])
 
 
